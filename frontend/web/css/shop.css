@@ -1,0 +1,263 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 12, 2021, 9:54:14 PM
+    Author     : PiSi
+*/
+:root{
+    /* seting variables */
+    --main-color:#63aae7;    
+    --sec-color:white;
+    --thr-color:rgb(34, 38, 41, 0.98);
+    --for-color:#286da8; 
+    --fif-color:#333;
+    --body-mask-color:rgb(255, 255, 255, 0.6);
+    --body-bac-image-mobile: url('/css/back/logo3_2.svg');
+    --body-bac-image-tablet:url('back/logo3_3.svg');
+    --main-font-size:1em;
+    --main-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --sec-font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+html {scroll-behavior: smooth;scrollbar-color: var(--for-color) var(--sec-color);}
+*,*:before, *:after{box-sizing: border-box;margin: 0;padding: 0;}
+a{text-decoration: none;}
+body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.responsiveimg{
+    width:100%;
+}
+.logout{
+        cursor: pointer;
+    /* background: none; */
+    color: var(--sec-color);
+    padding: 11px 17px;
+    width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    pointer-events: all;
+}
+.main-layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-layout > nav{
+    box-shadow: 0px 5px 8px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 5px 8px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 8px -3px rgba(0,0,0,0.75);
+}
+.main-layout > main{
+    flex: 1 0 auto;
+}
+.main-layout > footer{
+    padding: 0.8em;
+    background: var(--for-color);
+    color: var(--sec-color);
+    box-shadow: 0px -6px 8px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px -6px 8px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -6px 8px -3px rgba(0,0,0,0.75);
+}
+
+.nav-container{position: sticky;
+top: 0;
+right: 0;
+left: 0;
+z-index: 100;
+background: var(--for-color);}
+
+.main-nav{display: flex;flex-flow: row wrap; transition: 1s;}
+.main-nav > * {width: 100%;display:none;align-items: center;justify-content: center;}
+.main-nav > li:nth-child(1), .main-nav > li:nth-child(2){
+    background: var(--for-color);
+    width: 50%;   
+    display: flex;
+    margin-right: auto;
+}
+.main-nav > li > a{
+    color:var(--sec-color);
+    padding: 11px 17px;
+    width: 100%;
+    text-align: center;
+}
+.main-nav > li:nth-child(6),.main-nav > li:nth-child(7){
+    flex:50%;
+}
+.main-nav > li:not(:first-child) > a:hover, .main-nav > li:not(:first-child) > .active{ color: black;}
+.open-menu > *{display: flex;background: var(--thr-color);transition: 1s all;}
+.main-nav > li > a > img{width: 50px;height: 50px;transition: 1s;}
+.nav-scroll{background:  var(--thr-color);transition: 1s;padding: 0 10px;box-shadow: 0px 12px 7px -7px rgba(0,0,0,0.69);}
+.nav-scroll > li > a > img{transition: 1s;}
+
+
+
+
+
+.back-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.4em 0.8em ;
+    gap:0.2em; 
+}
+
+
+.back-nav > a{
+    color: #286da8; 
+    padding: 0.4em;
+    border-radius: 2px;
+     border: 1px solid #286da8;
+    border-radius: 2px;
+}
+
+.back-nav > a:hover {
+    
+    background: #286da8; 
+    color: white;   
+    
+    transition: 1s all;
+}
+
+
+
+
+.aye-icon:before{
+    content: '<svg aria-hidden="true" style="display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em;width:1.125em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M573 241C518 136 411 64 288 64S58 136 3 241a32 32 0 000 30c55 105 162 177 285 177s230-72 285-177a32 32 0 000-30zM288 400a144 144 0 11144-144 144 144 0 01-144 144zm0-240a95 95 0 00-25 4 48 48 0 01-67 67 96 96 0 1092-71z"></path></svg>';
+}
+.shop-back-nav{
+    display: flex;
+}
+.shop-back-nav > *{
+    padding: 10px 13px;
+}
+.flex-cats{
+    display: flex;flex-flow: row wrap;padding: .8em;gap: .0em;
+}
+
+.flex-cats > li {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    transition: 0.3s all;
+    border: 0px solid transparent;
+    padding: 0.4em;
+    gap:0.2em;
+}
+.flex-cats > li:hover{
+-webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.31); 
+box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.31);
+}
+.flex-cats > li:hover > figure > img{
+    transition: .5s;
+    transform: scale(1.2);
+}
+.flex-cats > li > h2 {
+    padding: 0;
+    font-size:1.2em;
+    border:1px solid transparent
+}
+.flex-cats > li > h2 > a {
+    border: 1px solid #286da8;
+    border-radius: 2px;
+     color: #286da8; 
+    transition: 0.5s all;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    padding: 0.4em;
+    text-decoration: none;
+}
+.flex-cats > li > h2 > a:hover {
+    
+    background: #286da8; 
+    color: white;   
+    
+    transition: 1s all;
+}
+ .flex-cats > li > p{
+    padding:  10px 10px;   
+}
+.flex-cats > li > figure{
+    overflow: hidden;
+    
+    border:1px solid transparent;
+height: 220px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+}
+.flex-cats > li > figure > img{
+    transition: .5s;
+    width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.article-pan{
+   display: flex;
+   flex-direction: column;
+   padding: 0.8em;
+}
+
+.article-pan > figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 766px) {
+    .article-pan {
+        padding: 0;
+    }
+     .main-nav{padding: 0 10px}     
+     .main-nav > li:nth-child(1){background: transparent;}
+    .main-nav > li:nth-child(2){display: none;}
+    .main-nav > li:nth-child(6), .main-nav > li:nth-child(7) {flex: 0;}
+    .main-nav > li, .main-nav > li:first-child{display: flex;width: auto;}
+    .article-pan{       
+        flex-direction: row-reverse;
+    }
+    .article-pan > figure{
+    flex: 40%;
+}
+    .article-pan > figure{
+    flex: 40%;
+    padding: 15px;
+}
+.article-pan > figure > img{
+    width: 100%;
+}
+.article-pan > header{
+    flex: 60%;
+}
+.article-pan > header{
+    padding: 15px;
+}
+
+   .flex-cats > li {
+    flex: 0 50%;
+}
+.flex-cats > li > nav{
+    margin-top: auto;
+}
+}
+@media all and (min-width: 1024px) {
+   .flex-cats > li {
+    flex: 0 33.333%;
+}
+}
+
+@media all and (min-width: 1224px) {
+   .flex-cats > li {
+    flex: 0 25%;
+}
+}
+
+
+
